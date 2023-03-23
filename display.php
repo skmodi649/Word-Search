@@ -11,93 +11,32 @@ include 'config.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Word Search</title>
-
+    <link rel="stylesheet" href="style.css">
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <style type="text/css">
-      .navbar-brand{
-        font-size: 1.8em;
-      }
-      #topContainer {
-        background-image: url("background3.jpg");
-        height: 400px;
-        width: 100%;
-        background-size: cover;
-      }
-      #topRow{
-        margin-top: 100px;
-        text-align: center;
-
-      }
-      #topRow h1{
-        font-size: 300%;
-      }
-      .bold{
-        font-weight: bold;
-      }
-      .marginTop{
-        margin-top: 30px;
-      }
-      .center{
-        text-align: center;
-      }
-      .title{
-        margin-top: 100px;
-        font-size: 300%;
-      }
-      #footer{
-        background-color:#B0D1FB;
-        padding-top: 70px;
-        width: 100%; 
-
-      }
-      .marginBottom{
-        margin-bottom: 30px;
-      }
-      .appstoreImage{
-        width:250px;
-      }
-    </style>
+    
 
   </head>
   <body>
-
-  <div class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          
+  <nav class=" navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">WordSearch</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
-
-        <a class="navbar-brand">WordSearch</a>
-      </div>
-        <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#topContainer">Home</a></li>
-          <li><a href="#result">Results</a></li>
-          <li><a href="#footer">About</a></li>
-        </ul>
-          
-          
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#result">Results</a></li>
+        <li class="nav-item"><a class="nav-link" href="#footer">About</a></li>
+          </div>
         </div>
-    </div>
+      </div>
+    </nav>
+  <div class="con contentcontainer" id="topContainer">
 
-  </div>
-
-  <div class="container contentContainer" id="topContainer">
-
-    <div class="row">
+    <div class="row wrapper">
         <div class="col-md-6 col-md-offset-3" id="topRow">
           <h1 class="marginTop">WordSearch</h1>
 
@@ -109,10 +48,11 @@ include 'config.php';
           <form class="marginTop" action="display.php" method="GET">
             
             <div class="input-group">
-              <span class="input-group-addon">=></span>
+              <!-- <span class="input-group-addon">=></span> -->
               <input type="text" placeholder="Search term goes here...." class="form-control" name="query" />
               </div>
-              <input type="submit" class="btn btn-success btn-lg marginTop" />
+              
+              <input type="submit" class="btn btn-success btn-lg marginTop" value="Search"/>
             
 
           </form>
@@ -218,7 +158,7 @@ $query = $_GET['query'];
   </div>
 
 
-  <div class="container contentContainer" id="footer" >
+  <div class="con1" id="footer" >
     <div class="row" >
       <h1 class="center title">
       Git Hub Repository!!
@@ -226,12 +166,12 @@ $query = $_GET['query'];
       </h1>
       <p class="lead center">
       Made By:<br>
-                1.Snigdh Gupta &nbsp;&nbsp;&nbsp; 149105462<br>
-                2.Sumitkumar Yadav &nbsp;&nbsp;&nbsp; 149105478
+                1. Randhir Kumar Choudhary &nbsp;&nbsp;&nbsp; 20BCE0122<br>
+                2. Suraj Kumar &nbsp;&nbsp;&nbsp; 20BCE2835
         
       </p>
-     <center><h2><a href="https://github.com/ysumit99">Get code!</a></h2></center>
-      
+     <center><h2><a href="https://github.com/skmodi649/Word-Search">Get code!</a></h2></center>
+      <marquee behavior="scroll" direction="left" scrollamount="11">&copy; All rights reserved under Parallel and Distributed Computing Project 2023 !!</marquee>
     </div>
 
 
@@ -241,7 +181,6 @@ $query = $_GET['query'];
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
       $(".contentContainer").css("min-height",$(window).height());
     </script>

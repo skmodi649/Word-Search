@@ -1,3 +1,7 @@
+//Parallel processing Assignment 
+//Authors: Snigdh Gupta(149105462) & SumitKumar Yadav(149105478) ,02-04-2017 , 4:16pm
+//CSE SEC C
+//to compile : g++ pagerank.cpp -std=c++0x
 //parallel code
 #include <omp.h>
 #include <bits/stdc++.h>
